@@ -11,7 +11,7 @@ export const projectsData = [
         tools: ['ReactJs', 'NextJs', 'Typescript', 'Tailwind', 'Redux', 'RTK-Query', 'DigitalOcean Spaces'],
         role: 'Frontend Engineer',
         code: '',
-        demo: 'office.reachcinema.io',
+        demo: 'https://reachcinema.io/',
         image: crefin,
     },
     {
@@ -41,7 +41,7 @@ export const projectsData = [
         tools: ['Angular', 'Redux', ],
         code: '',
         role: 'Frontend Engineer',
-        demo: '',
+        demo: 'https://abccargoxpress.com/',
         image: realEstate,
     },
     {
@@ -51,7 +51,7 @@ export const projectsData = [
         tools: ['Angular', 'Redux', ],
         code: '',
         role: 'Frontend Engineer',
-        demo: '',
+        demo: 'https://edsofta.com/tutor/',
         image: realEstate,
     }, {
         id: 7,
@@ -69,7 +69,7 @@ export const projectsData = [
         tools: ['Angular', 'Redux', ],
         code: '',
         role: 'Software Engineer',
-        demo: '',
+        demo: 'https://edsofta.com/reseller/',
         image: realEstate,
     },{
         id: 9,
@@ -87,7 +87,7 @@ export const projectsData = [
         tools: ['Android'],
         code: '',
         role: 'Software Engineer',
-        demo: '',
+        demo: 'https://play.google.com/store/apps/details?id=com.edsofta.utme&hl=en&pli=1',
         image: realEstate,
     },
 ];

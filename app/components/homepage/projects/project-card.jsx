@@ -1,6 +1,7 @@
 // @flow strict
 
 import * as React from 'react';
+import Link from "next/link";
 
 function ProjectCard({ project }) {
 
@@ -17,7 +18,10 @@ function ProjectCard({ project }) {
           <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-green-200"></div>
         </div>
         <p className="text-center ml-3 text-[#16f2b3] text-base lg:text-xl">
-          {project.name}
+          {project.demo ?  <Link href={project.demo || ""} target="_blank">
+            {project.name}
+          </Link> : project.name}
+
         </p>
       </div>
       <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
@@ -40,13 +44,13 @@ function ProjectCard({ project }) {
             <span className="text-gray-400">{` ['`}</span>
             {
               project.tools.map((tag, i) => (
-                <React.Fragment key={i}>
-                  <span className="text-amber-300">{tag}</span>
-                  {
-                    project.tools.length - 1 !== i &&
-                    <span className="text-gray-400">{`', '`}</span>
-                  }
-                </React.Fragment>
+                  <React.Fragment key={i}>
+                    <span className="text-amber-300">{tag}</span>
+                    {
+                        project.tools.length - 1 !== i &&
+                        <span className="text-gray-400">{`', '`}</span>
+                    }
+                  </React.Fragment>
               ))
             }
             <span className="text-gray-400">{"],"}</span>
@@ -61,6 +65,14 @@ function ProjectCard({ project }) {
             <span className="text-cyan-400">{' ' + project.description}</span>
             <span className="text-gray-400">,</span>
           </div>
+          {project.demo ? <div className="ml-4 lg:ml-8 mr-2">
+            <span className="text-white">Demo:</span>
+            {' '}
+            <span className="text-cyan-400 underline">
+              <Link href={project.demo}>{project.demo}</Link>
+            </span>
+            <span className="text-gray-400">,</span>
+          </div> : null}
           <div><span className="text-gray-400">{`};`}</span></div>
         </code>
       </div>
